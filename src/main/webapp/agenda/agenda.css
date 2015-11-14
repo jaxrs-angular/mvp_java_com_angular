@@ -1,0 +1,115 @@
+html{
+    background-color: silver;
+    height: 100%;
+}
+body{
+    padding: 3px;
+    margin: 0px;
+    background-color: #FFFFFF;
+    margin-left: calc(50% - 400px);
+    width: 800px;
+    height: calc(100% - 6px);
+}
+table{
+    width: 100%;
+}
+label{
+    margin-top: 3px;
+    display: inline-block;
+    width: 100px;
+}
+.bt{
+    display: inline-block;
+    background-color: #FAFAFA;
+    border: 1px solid #6e6e6e;
+    margin-left: 3px;
+    cursor: pointer;
+    padding: 3px;
+}
+.bt:hover{
+    background-color: #E5E5E5;
+}
+.bt:active{
+    background-color: #d6f8fb;
+}
+
+.bt.btEdita{
+    float: left;
+    width: 25px;
+    height: 25px;
+    background-image: url("../common/img/editar.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bt.btRemove{
+    float: left;
+    width: 25px;
+    height: 25px;
+    background-image: url("../common/img/remover.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bt.btConsulta{
+    float: left;
+    width: 25px;
+    height: 25px;
+    background-image: url("../common/img/detalhes.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+.bt.btEditaBlock{
+    float: left;
+    width: 25px;
+    height: 25px;
+    background-image: url("../common/img/editar_lock.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bt.btRemoveBlock{
+    float: left;
+    width: 25px;
+    height: 25px;
+    background-image: url("../common/img/remover_lock.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bt.btConsultaBlock{
+    float: left;
+    width: 25px;
+    height: 25px;
+    background-image: url("../common/img/detalhes_lock.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+
+#nome{
+   width: 350px;
+}
+#telefone {
+    width: 350px;
+}
+#filtro{
+    width: 350px;
+}
+.cinza{
+    background-color: #ebebeb ;
+}
+.linha:hover{
+    background-color: #b2b2b2 ;
+}
+.selecionado{
+    background-color: #ffa673;
+}

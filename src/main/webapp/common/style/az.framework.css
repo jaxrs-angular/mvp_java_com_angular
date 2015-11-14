@@ -1,0 +1,70 @@
+.boxLongtext {
+    width: 100% !important;
+}
+.boxMemo {
+    width: 100% !important;
+}
+.AzFCombobox{
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    background-image: url(http://i62.tinypic.com/15xvbd5.png) -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    color: #555;
+    font-size: inherit;
+    margin: 20px;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px;
+}
+
+
+.crudBtEditar{background-image: url("/common/img/editar.png") !important;background-repeat: no-repeat !important;width: 30px;min-width: 30px !important; height: 30px;}
+.crudBtEditar a.k-button:hover{background-image: url("/common/img/editar.png") !important;background-repeat: no-repeat!important; width: 30px;min-width: 30px !important; height: 30px;}
+
+.crudBtNovo{background-image: url("/common/img/novo.png") !important;background-repeat: no-repeat !important; width: 30px; min-width: 30px !important; height: 30px;}
+.crudBtNovo a.k-button:hover{background-image: url("/common/img/novo.png") !important;background-repeat: no-repeat!important; width: 30px; min-width: 30px !important; height: 30px;}
+
+.crudBtExcluir{background-image: url("/common/img/remover.png") !important;background-repeat: no-repeat !important; width: 30px;min-width: 30px !important; height: 30px;}
+.crudBtExcluir a.k-button:hover{background-image: url("/common/img/remover.png") !important;background-repeat: no-repeat!important; width: 30px;min-width: 30px !important; height: 30px;}
+
+.crudBtVisualizar{background-image: url("/common/img/detalhes.png") !important;background-repeat: no-repeat !important; width: 30px;min-width: 30px !important; height: 30px;}
+.crudBtVisualizar a.k-button:hover{background-image: url("/common/img/detalhes.png") !important;background-repeat: no-repeat!important; width: 30px;min-width: 30px !important; height: 30px;}
+
+#crudTitulo{
+    float:right;
+    font-weight: bold;
+    font-size: xx-large;
+    margin-right: 5px;
+}
+
+.validationFault{
+	background-image: url("/framework/images/marca_vermelha.png") !important;
+	background-repeat: no-repeat !important;
+	background-position: 0px 0px !important;
+}
+
+.pointToN{
+    background-image: url("/framework/images/error_down.png") !important;
+}
+.pointToS{
+    background-image: url("/framework/images/error_up.png") !important;
+}
+.pointToE{
+    background-image: url("/framework/images/error_left.png") !important;
+}
+.pointToW{
+    background-image: url("/framework/images/error_right.png") !important;
+}
+
+fieldset{
+    border: #a1a1a1 1px solid !important;
+    background-color: #fdfdfd;
+}

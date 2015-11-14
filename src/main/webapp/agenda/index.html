@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="agendaApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Minha Agenda</title>
+
+    <script type="text/javascript" src="../common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../common/js/angular.min.js"></script>
+    <script type="text/javascript" src="agenda.js"></script>
+    <link rel="stylesheet" href="agenda.css">
+    <script src="agenda.js"></script>
+
+</head>
+<body ng-controller="agendaCtrl">
+    <button ng-click="incluir()" ng-show="estado==NAVIGATING">Novo Contato</button>
+    <fieldset ng-hide="estado==NAVIGATING">
+
+        <legend>Contato</legend>
+        <label>Nome</label>         <input id="nome"        ng-model="agenda.nome"       type="text"            ng-readonly="estado==SHOWING || estado == DELETING"><br>
+        <label>Tipo</label>         <select id="tipo"       ng-model="agenda.tipo"       ng-options="item.nome for item in tipos track by item.id" ng-disabled="estado==SHOWING || estado == DELETING"></select><br>
+        <label>Telefone</label>     <input id="telefone"    ng-model="agenda.telefone"   type="text" ng-readonly="estado==SHOWING || estado == DELETING"><br>
+        <label>Nascimento</label>   <input id="nascimento"  ng-model="agenda.nascimento" type="date" ng-readonly="estado==SHOWING || estado == DELETING"><br>
+        <label>Saldo</label>        <input id="saldo"       ng-model="agenda.saldo"      type="number" ng-readonly="estado==SHOWING || estado == DELETING"><br>
+        <label>&nbsp;</label>
+            <button ng-show="estado!=SHOWING && estado!=DELETING" ng-click="salvar()">Salvar</button>
+            <button ng-show="estado==DELETING" ng-click="remover()">Excluir</button>
+            <button ng-show="estado!=SHOWING" ng-click="cancelar()">Cancelar</button>
+            <button ng-show="estado==SHOWING" ng-click="estado=NAVIGATING">Fechar</button>
+
+    </fieldset>
+    <fieldset ng-show="estado==NAVIGATING">
+        <legend>Filtro</legend>
+        <label>Nome</label><input ng-model="filtro" id="filtro" type="text"> <button ng-click="listar()">Filtrar</button> <button ng-click="limpar()">Limpar</button>
+    </fieldset>
+    <table>
+        <thead>
+            <tr style="background-color: #dddddd; height: 25px">
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in agendas" ng-class-odd="'cinza'" class="linha" ng-class="{selecionado:item==agenda}" ng-click="marcar(item)">
+                <td>{{item.nome}}</td>
+                <td>{{item.telefone}}</td>
+                <td width="120px">
+                    <span class="bt" ng-class="{btEdita:estado==NAVIGATING,btEditaBlock:estado!=NAVIGATING}" ng-click="editar(item)"></span>
+                    <span class="bt" ng-class="{btRemove:estado==NAVIGATING,btRemoveBlock:estado!=NAVIGATING}"  ng-click="excluir(item)"></span>
+                    <span class="bt" ng-class="{btConsulta:estado==NAVIGATING,btConsultaBlock:estado!=NAVIGATING}" ng-click="mostrar(item)"></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
